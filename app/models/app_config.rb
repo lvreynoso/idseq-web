@@ -18,4 +18,7 @@ class AppConfig < ApplicationRecord
   # When this is "1", the announcement banner on the top of the site header will be enabled.
   # Other conditions may check a time constraint.
   SHOW_ANNOUNCEMENT_BANNER = 'show_announcement_banner'.freeze
+
+  # Switch for additional ActiveRecord validations that were added en masse in Feb 2020.
+  ENABLE_MASS_VALIDATION = 'enable_mass_validation'.freeze
 end
