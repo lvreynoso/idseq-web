@@ -20,5 +20,6 @@ class AppConfig < ApplicationRecord
   SHOW_ANNOUNCEMENT_BANNER = 'show_announcement_banner'.freeze
 
   # Switch for additional ActiveRecord validations that were added en masse in Feb 2020.
+  # Presence of the flag switches on the feature.
   ENABLE_MASS_VALIDATION = 'enable_mass_validation'.freeze
 end
