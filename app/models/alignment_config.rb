@@ -15,7 +15,7 @@ class AlignmentConfig < ApplicationRecord
 
   # This constant takes its value from the deployment environment so we can have
   # different alignment configs per environment.
-  DEFAULT_NAME = ENV["ALIGNMENT_CONFIG_DEFAULT_NAME"] || "2020-02-03"
+  DEFAULT_NAME = ENV["ALIGNMENT_CONFIG_DEFAULT_NAME"]
 
   # Get the max lineage version from a set of alignment config ids.
   def self.max_lineage_version(alignment_config_ids)
