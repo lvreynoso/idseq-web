@@ -13,7 +13,9 @@ class AlignmentConfig < ApplicationRecord
   validates :s3_deuterostome_db_path, presence: true, if: :mass_validation_enabled?
   validates :lineage_version, presence: true, numericality: { integer_only: true, greater_than: 0 }, if: -> { respond_to?(:lineage_version) && mass_validation_enabled? } # respond_to? for migrations
 
-  DEFAULT_NAME = ENV["ALIGNMENT_CONFIG_DEFAULT_NAME"]
+  # This constant takes its value from the deployment environment so we can have
+  # different alignment configs per environment.
+  DEFAULT_NAME = ENV["ALIGNMENT_CONFIG_DEFAULT_NAME"] || "2020-02-03"
 
   # Get the max lineage version from a set of alignment config ids.
   def self.max_lineage_version(alignment_config_ids)
