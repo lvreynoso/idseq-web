@@ -3,7 +3,7 @@
 # setup here may need to be reproduced in travis.yml.
 
 x-web-variables: &web-variables
-  ? ALIGNMENT_CONFIG_DEFAULT_NAME=2020-02-03
+  ? ALIGNMENT_CONFIG_DEFAULT_NAME=2020-02-10
   ? SAMPLES_BUCKET_NAME=idseq-samples-development
   ? ES_ADDRESS=http://elasticsearch:9200
   ? AIRBRAKE_PROJECT_ID
